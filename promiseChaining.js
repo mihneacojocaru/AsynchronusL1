@@ -14,18 +14,18 @@ function result(x){
 }
 
 
-let value="da";
+let value=5;
 
 const math = new Promise( (resolve,reject) => {
     setTimeout(
-             ()=>{
-          if(typeof value == "number"){
-            resolve(value);
-            } else {
-            reject("Specified value must be a number.");
-            }
+        ()=>{
+     if(typeof value == "number"){
+       resolve(value);
+       } else {
+       reject("Specified value must be a number.");
+       }
 
-    },1000)
+},1000)
 });
 
 // math
@@ -40,19 +40,21 @@ const math = new Promise( (resolve,reject) => {
 
 
 
-// async function ceva(){
+async function ceva(){
 
-//     try{
+    try{
 
-//     let data= await math();
+    let data= await math;
 
-//     console.log(data);
+    console.log(data);
 
-//     }catch(err){
+    }catch(err){
 
-//         console.log("sunt aici");
-//         console.log(err);
-//     }
+        console.log("sunt aici");
+        console.log(err);
+    }
     
-// }
+}
+
+ceva();
 
