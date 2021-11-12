@@ -1,31 +1,27 @@
 
-function add (x) {
 
-    return x+2;
+function add(x) {
+  return x + 2;
 }
 
 function subs(x) {
-
-    return x-5;
+  return x - 5;
 }
 
-function result(x){
-    console.log(x);
+function result(x) {
+  console.log(x);
 }
 
+let value = 23;
 
-let value=5;
-
-const math = new Promise( (resolve,reject) => {
-    setTimeout(
-        ()=>{
-     if(typeof value == "number"){
-       resolve(value);
-       } else {
-       reject("Specified value must be a number.");
-       }
-
-},1000)
+const math = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (typeof value == "number") {
+      resolve(value);
+    } else {
+      reject("Specified value must be a number.");
+    }
+  }, 1000);
 });
 
 // math
@@ -38,23 +34,22 @@ const math = new Promise( (resolve,reject) => {
 //     console.log("From finally");
 // })
 
+// async function something(){
 
+//     try{
 
-async function ceva(){
+//     let data= await math;
 
-    try{
+        // let d=add(data);
+        // let z=subs(data);
+//     console.log(data);
 
-    let data= await math;
+//     }catch(err){
 
-    console.log(data);
+//         console.log("I'm here");
+//         console.log(err);
+//     }
 
-    }catch(err){
+// }
 
-        console.log("sunt aici");
-        console.log(err);
-    }
-    
-}
-
-ceva();
-
+// something();
